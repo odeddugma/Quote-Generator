@@ -55,7 +55,7 @@ async function getQuotes() {
 }
 
 // Tweet Quote
-function tzzweetQuote() {
+function tweetQuote() {
     const twitterUrl = `https://twitter.com/intent/tweet?text=${quoteText.textContent} - ${authorText.textContent}`;
     window.open(twitterUrl, '_blunk');
 }
