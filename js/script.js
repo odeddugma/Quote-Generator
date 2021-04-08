@@ -46,11 +46,17 @@ async function getQuotes() {
     loading();
     const apiUrl = 'https://type.fit/api/quotes';
     try {
+        //throw error;
         const response = await fetch(apiUrl);
         apiQuotes = await response.json();
         generateNewQuote();
     } catch (error) {
-        console.log(error)
+        /* In the case of failure to get quotes from a remote API, use local array of quotes from quotes.js file.
+        IMPORTANT: This time 'apiQuotes' derived from a local variable and not from an API! */
+        apiQuotes = localQuotes;
+        generateNewQuote();
+        console.log(`There was a problem getting the quotes from API. This is a local quote.
+        error message: ${error}`);
     }
 }
 
