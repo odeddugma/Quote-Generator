@@ -7,3 +7,5 @@ Front-end app that generates randomly real quotes from a remote API. Once loaded
 ###### Fetch
 ###### Async/Await
 ###### Quote API
+
+You can watch this project live [here](https://odeddugma.co.il/projects/quote-generator/)
